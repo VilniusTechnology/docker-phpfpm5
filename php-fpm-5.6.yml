@@ -1,0 +1,4 @@
+phpfpm:
+    build: .
+    volumes:
+        - ./ini:/usr/local/etc/php
