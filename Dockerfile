@@ -53,8 +53,8 @@ RUN PATH=$PATH:/root/.composer/vendor/bin
 RUN apt-get clean && apt-get autoclean && apt-get autoremove
 
 ADD ./ini/php.ini /usr/local/etc/php/php.ini
-ADD ./entrypoint /entrypoint/entrypoint.sh
+ADD ./entrypoint/entrypoint.sh /entrypoint/entrypoint.sh
 
 VOLUME ["/var/www/"]
 
-CMD ["php-fpm"]
+CMD ["/entrypoint/entrypoint.sh"]
