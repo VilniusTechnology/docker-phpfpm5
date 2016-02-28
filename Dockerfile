@@ -19,6 +19,7 @@ RUN apt-get install -y \
     && docker-php-ext-install mysql \
     && docker-php-ext-install iconv \
     && docker-php-ext-install mcrypt \
+    && docker-php-ext-install bcmath \
     && docker-php-ext-install intl \
     && docker-php-ext-install opcache \
     && docker-php-ext-install mbstring
