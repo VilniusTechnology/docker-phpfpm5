@@ -22,11 +22,12 @@ RUN apt-get install -y \
     && docker-php-ext-install bcmath \
     && docker-php-ext-install intl \
     && docker-php-ext-install opcache \
-    && docker-php-ext-install mongo \
     && docker-php-ext-install mbstring
 
 # Deploy git
 RUN apt-get install -y git-all
+
+RUN apt-get install php5-mongo
 
 # Install Xdebug
 RUN pecl install xdebug
