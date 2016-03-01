@@ -25,7 +25,7 @@ RUN apt-get install -y \
     && docker-php-ext-install mbstring
 
 # Deploy git
-RUN apt-get install -y git-all
+RUN apt-get install git-all
 
 RUN apt-get install php5-mongo
 
