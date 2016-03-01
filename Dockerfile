@@ -28,6 +28,7 @@ RUN apt-get install -y \
 RUN apt-get install -y -qq git-all
 
 RUN apt-get install -y -qq php5-mongo
+RUN apt-get install -y -qq php5-xdebug
 
 # Install Xdebug
 RUN pecl install xdebug
