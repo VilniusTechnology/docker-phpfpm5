@@ -1,4 +1,4 @@
-FROM php:5.6-fpm
+FROM debian:jessie
 
 MAINTAINER "Lukas Mikelionis" <lukas.mikelionis@vilnius.technology>
 
@@ -29,6 +29,10 @@ RUN apt-get install -y -qq git-all
 
 RUN apt-get install -y -qq php5-mongo
 RUN apt-get install -y -qq php5-xdebug
+RUN apt-get install -y -qq php5-apcu
+RUN apt-get install -y -qq php5-common 
+RUN apt-get install -y -qq php5-cli
+RUN apt-get install -y -qq php5-fpm
 
 # Install Xdebug
 RUN pecl install xdebug
