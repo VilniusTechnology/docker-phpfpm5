@@ -14,25 +14,25 @@ RUN apt-get install -y \
     libmcrypt-dev  \
     libicu-dev \
     mysql-client \
-    && docker-php-ext-install pdo_mysql \
-    && docker-php-ext-install mysqli \
-    && docker-php-ext-install mysql \
-    && docker-php-ext-install iconv \
-    && docker-php-ext-install mcrypt \
-    && docker-php-ext-install bcmath \
-    && docker-php-ext-install intl \
-    && docker-php-ext-install opcache \
-    && docker-php-ext-install mbstring
-
-# Deploy git
-RUN apt-get install -y -qq git-all
-
+    && php5-pdo_mysql \
+    && php5-mysqli \
+    && php5-mysql \
+    && php5-iconv \
+    && php5-mcrypt \
+    && php5-bcmath \
+    && php5-intl \
+    && php5-opcache \
+    && php5-mbstring
+    
 RUN apt-get install -y -qq php5-mongo
 RUN apt-get install -y -qq php5-xdebug
 RUN apt-get install -y -qq php5-apcu
 RUN apt-get install -y -qq php5-common 
 RUN apt-get install -y -qq php5-cli
 RUN apt-get install -y -qq php5-fpm
+
+# Deploy git
+RUN apt-get install -y -qq git-all
 
 # Install Xdebug
 RUN pecl install xdebug
