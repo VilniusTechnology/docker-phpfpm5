@@ -43,6 +43,10 @@ RUN composer global require "laravel/installer"
 RUN ln -s /root/.composer/vendor/bin/laravel /usr/local/bin/laravel
 RUN PATH=$PATH:/root/.composer/vendor/bin
 
+#npm
+RUN apt-get install -y nodejs
+RUN apt-get install -y npm
+
 # Cleanup
 RUN apt-get clean && apt-get autoclean && apt-get autoremove
 
