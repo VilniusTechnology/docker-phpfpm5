@@ -26,7 +26,6 @@ RUN apt-get install -y -qq php5-mcrypt
 RUN apt-get install -y -qq php5-bcmath
 RUN apt-get install -y -qq php5-intl
 RUN apt-get install -y -qq php5-opcache
-RUN apt-get install -y -qq php5-mbstring
 RUN apt-get install -y -qq php5-mongo
 RUN apt-get install -y -qq php5-xdebug
 RUN apt-get install -y -qq php5-apcu
