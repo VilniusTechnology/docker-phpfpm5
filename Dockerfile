@@ -9,6 +9,8 @@ RUN apt-get install -y php-pear
 RUN apt-get install -y zziplib-bin
 RUN pecl install "channel://pecl.php.net/zip-1.5.0"
 
+RUN apt-get install curl
+
 # Install modules
 RUN apt-get install -y \
     libmcrypt-dev  \
