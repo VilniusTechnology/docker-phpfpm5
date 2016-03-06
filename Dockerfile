@@ -38,15 +38,15 @@ RUN apt-get install -y -qq php5-fpm
 RUN apt-get install -y -qq git-all
 
 # Install Xdebug
-RUN pecl install xdebug
+# RUN pecl install xdebug
 
-RUN curl -SL "http://xdebug.org/files/xdebug-2.4.0rc2.tgz" -o xdebug.tgz
-RUN tar zxvf xdebug.tgz
-RUN cd xdebug-2.4.0RC2 && \
-    phpize && \
-    ./configure && \
-    make && \
-    cp modules/xdebug.so /usr/local/lib/php/extensions/no-debug-non-zts-20151012
+# RUN curl -SL "http://xdebug.org/files/xdebug-2.4.0rc2.tgz" -o xdebug.tgz
+# RUN tar zxvf xdebug.tgz
+# RUN cd xdebug-2.4.0RC2 && \
+#    phpize && \
+#    ./configure && \
+#    make && \
+#    cp modules/xdebug.so /usr/local/lib/php/extensions/no-debug-non-zts-20151012
 
 # Deploy php's dependency manager composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
