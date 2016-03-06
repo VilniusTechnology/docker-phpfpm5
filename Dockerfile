@@ -13,17 +13,21 @@ RUN pecl install "channel://pecl.php.net/zip-1.5.0"
 RUN apt-get install -y \
     libmcrypt-dev  \
     libicu-dev \
-    mysql-client \
-    && php5-pdo_mysql \
-    && php5-mysqli \
-    && php5-mysql \
-    && php5-iconv \
-    && php5-mcrypt \
-    && php5-bcmath \
-    && php5-intl \
-    && php5-opcache \
-    && php5-mbstring
-    
+    mysql-client
+
+# Install PHP5 modules
+RUN apt-get install -y -qq php5-cli
+RUN apt-get install -y -qq php5-fpm
+RUN apt-get install -y -qq php5-common
+RUN apt-get install -y -qq php5-xhprof
+RUN apt-get install -y -qq php5-mysql
+RUN apt-get install -y -qq php5-mysqlnd 
+RUN apt-get install -y -qq php5-iconv
+RUN apt-get install -y -qq php5-mcrypt
+RUN apt-get install -y -qq php5-bcmath
+RUN apt-get install -y -qq php5-intl
+RUN apt-get install -y -qq php5-opcache
+RUN apt-get install -y -qq php5-mbstring
 RUN apt-get install -y -qq php5-mongo
 RUN apt-get install -y -qq php5-xdebug
 RUN apt-get install -y -qq php5-apcu
