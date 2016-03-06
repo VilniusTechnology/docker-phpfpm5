@@ -32,9 +32,6 @@ RUN apt-get install -y -qq php5-xdebug
 RUN apt-get install -y -qq php5-curl
 
 
-# Deploy git
-RUN apt-get install git-all
-
 # Install Xdebug
 # RUN pecl install xdebug
 
