@@ -22,7 +22,6 @@ RUN apt-get install -y -qq php5-common
 RUN apt-get install -y -qq php5-xhprof
 RUN apt-get install -y -qq php5-mysql
 RUN apt-get install -y -qq php5-mysqlnd 
-RUN apt-get install -y -qq php5-iconv
 RUN apt-get install -y -qq php5-mcrypt
 RUN apt-get install -y -qq php5-bcmath
 RUN apt-get install -y -qq php5-intl
