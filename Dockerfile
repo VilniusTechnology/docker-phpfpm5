@@ -23,8 +23,10 @@ RUN apt-get install -y \
     && docker-php-ext-install intl \
     && docker-php-ext-install opcache \
     && docker-php-ext-install sockets \
-    && docker-php-ext-install zip \
     && docker-php-ext-install mbstring
+
+RUN apt-get install zlib1g-dev
+RUN docker-php-ext-install zip
 
 # Deploy git
 RUN apt-get install -y git-all
